@@ -2,7 +2,7 @@
 
 echo "Please enter your username::"
 
-read -s  USERNAME #the value entered above will automatically to USERNAME variable
+read   USERNAME #the value entered above will automatically to USERNAME variable
 
 
 echo "Please enter your Password::"
