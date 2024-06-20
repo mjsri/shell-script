@@ -1,6 +1,7 @@
 #!/bin/bash
 
 ID=$(id -u)
+# id -u is 0 for only root user if we run that command other than root user it will give other value than 0
 TIMESTAMP=$(date +%F-%H-%M-%S)
 R="\e[31m"
 G="\e[32m"
@@ -31,6 +32,8 @@ fi  # fi means end of if means end of statement
 yum install mysql -y &>> $LOGFILE
 
 VALIDATE $? "Installing mysql"
+
+#In above and below line $? is $1 and Installing mysql and installing git is $2
 
 yum install git -y &>> $LOGFILE
 
