@@ -3,7 +3,8 @@
 PERSON1=$1
 PERSON2=$2
 
-#Here we are passing variables name while execution time we have to give names Ramesh Suresh by giving Space
+#Here we are passing variables name while execution time we have to give names Ramesh Suresh by giving Space 
+# when we run sh 04-variables.sh ramesh suresh we will get output
 
 echo "$PERSON1: Hello $PERSON2 , Good morning"
 echo "$PERSON2: Hi $PERSON1 ,very good morning"
