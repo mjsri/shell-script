@@ -4,7 +4,7 @@ DISK_USAGE=$(df -hT | grep -vE 'tmp|File') # it will check disks with tmp and Fi
 DISK_THRESHOLD=1
 message=""
 
-while IFS= read line  # it will check line by line
+while IFS= read line  # it will check line by line  (IFS means Internal file seperator)
 do
     usage=$(echo $line | awk '{print $6F}' | cut -d % -f1)  #it will remove un wanted parts in the lines
     partition=$(echo $line | awk '{print $1F}')
@@ -19,3 +19,9 @@ echo -e "Message: $message"
 #echo "$message" | mail -s "High Disk Usage" info@joindevops.com
 
 sh mail.sh "DevOps Team" "High Disk Usage" "$message" "info@joindevops.com" "ALERT High Disk Usage"
+
+#!/bin/bash
+
+DISK_USAGE=$(df -hT | grep -vE 'tmp|File')
+DISK_THRESHOLD=1
+message=""
